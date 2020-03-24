@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  cache:
+    type: redis
+amazonProperties:
+  endpointUrl: https://s3.xx-xx-xx.amazonaws.com
+  accessKey: xxxxxxxxxx
+  secretKey: xxxxxxxxxx
+  bucketName: xxxxxxxxx
