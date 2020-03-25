@@ -1,5 +1,6 @@
 package com.example.demo.dtos.user;
 
+import com.example.demo.enums.RoleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,5 +34,7 @@ public class WritableRegister implements Serializable {
     @NotBlank
     @Size(min = 5, max = 90)
     private String password;
+
+    private RoleType roleType;
 
 }

@@ -1,5 +1,6 @@
 package com.example.demo.services.user;
 
+import com.example.demo.enums.RoleType;
 import com.example.demo.models.User;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public interface UserService {
 
     User findByUsername(String username);
 
-    User create(User user);
+    User create(User user, RoleType roleType);
 
     User update(Long id, User updatedUser);
 

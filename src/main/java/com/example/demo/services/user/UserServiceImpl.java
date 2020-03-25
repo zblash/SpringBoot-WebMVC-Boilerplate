@@ -1,5 +1,6 @@
 package com.example.demo.services.user;
 
+import com.example.demo.enums.RoleType;
 import com.example.demo.exceptions.BadRequestException;
 import com.example.demo.models.Role;
 import com.example.demo.models.User;
