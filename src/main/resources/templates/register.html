@@ -36,7 +36,7 @@
             <i class="fas fa-lock"></i>
             <input type="password" name="password" placeholder="password"/>
         </div>
-        <select name="color">
+        <select name="color" th:field="*{RoleType}">
             <option th:each="roleOpt : ${T(com.example.demo.enums.RoleType).values()}"
                     th:value="${roleOpt}" th:text="${roleOpt}"></option>
         </select>

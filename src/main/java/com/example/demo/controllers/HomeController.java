@@ -39,7 +39,7 @@ public class HomeController {
         if (result.hasErrors()){
             return "register";
         } else {
-            userService.create(UserMapper.writableRegisterToUser(register));
+            userService.create(UserMapper.writableRegisterToUser(register), register.getRoleType());
 
         }
         return "redirect:/login";
