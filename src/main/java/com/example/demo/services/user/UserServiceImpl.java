@@ -1,6 +1,7 @@
 package com.example.demo.services.user;
 
 import com.example.demo.exceptions.BadRequestException;
+import com.example.demo.models.Role;
 import com.example.demo.models.User;
 import com.example.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private RoleService roleService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -39,9 +43,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User create(User user) {
+    public User create(User user, RoleType roleType) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-
+        Role role = roleService.createOrFind("ROLE_"+roleType.toString());
+        user.setRole(role);
         return userRepository.save(user);
     }
 
