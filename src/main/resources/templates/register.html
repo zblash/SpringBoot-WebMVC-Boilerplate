@@ -18,26 +18,26 @@
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input type="text" th:field="*{FirstName}" placeholder="Adiniz"/>
+            <input type="text" th:field="*{FirstName}" placeholder="First name"/>
         </div>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input type="text" th:field="*{LastName}" placeholder="Soyadiniz"/>
+            <input type="text" th:field="*{LastName}" placeholder="Last name"/>
         </div>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input type="text" th:field="*{UserName}" placeholder="Kullanici Adiniz"/>
+            <input type="text" th:field="*{Username}" placeholder="username"/>
         </div>
         <div class="textbox">
             <i class="fas fa-user"></i>
-            <input type="text" th:field="*{Email}" placeholder="Email Adresiniz"/>
+            <input type="text" th:field="*{Email}" placeholder="Email"/>
         </div>
         <div class="textbox">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password" placeholder="Şifreniz"/>
+            <input type="password" name="password" placeholder="password"/>
         </div>
 
-        <input type="submit" class="btn" value="Kayit Ol">
+        <input type="submit" class="btn" value="Register">
     </form>
 </div>
 
